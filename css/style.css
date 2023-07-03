@@ -1,0 +1,114 @@
+:root{
+    --green-color: #5BC241;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;800&display=swap');
+
+
+body{
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    width: 100%;
+    height: 100vh;
+}
+
+.nav-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    min-height: 80px;
+}
+
+.logo-area{
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+}
+
+.menu{
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.menu .button{
+    border-radius: 10px;
+    padding: 11px 21px;
+    background-color: var(--green-color);
+}
+
+.menu li{
+    padding-inline: 10px;
+}
+
+.menu a{
+    padding: 11px 7px;
+    transition: 0.3s ease-in-out;
+}
+
+.menu a:hover{
+    background-color: var(--green-color);
+    color: #ffffff;
+}
+
+
+/*
+///////////////////////////////////////////////////
+            Hamburguer menu button
+////////////////////////////////////////////////////
+*/
+
+
+#ckeckout{
+    display: none;
+}
+
+.hamburguer-container{
+    position: relative;
+    height: 60px;
+    width: 60px;
+    display: none;
+}
+
+.hamburguer{
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 25%;
+    transition: 0.3s;
+}
+
+.hamburguer::after,
+.hamburguer::before{
+    content: '';
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+}
+
+.hamburguer::after{
+    top: 10px;
+}
+.hamburguer::before{
+    top: -10px
+}
+
+.nav-area input:checked ~ label .hamburguer{
+    transform: rotate(45deg);
+}
+
+.nav-area input:checked ~ label .hamburguer::after{
+    transform: rotate(90deg);
+    top: 0;
+}
+
+.nav-area input:checked ~ label .hamburguer::before{
+    transform: rotate(-90deg);
+    top: 0;
+}

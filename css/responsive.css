@@ -1,0 +1,25 @@
+@media(max-width: 900px){
+    .menu-container{
+        display: none;
+    }
+
+    .hamburguer-container{
+        display: block;
+    }
+
+    .nav-area input:checked ~ .menu-container{
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 100px;
+    }
+
+    .nav-area input:checked ~ .menu-container .menu{
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .nav-area input:checked ~ label .hamburguer-container{
+        left: 30px;
+    }
+}
